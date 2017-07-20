@@ -35,12 +35,23 @@ puts '5 Skills created'
   )
 end
 
-  Portfolio.create!(
-    title: "Portfolio title: angular things",
-    subtitle: "Angular",
-    body:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit provident aliquid debitis perferendis eaque dolor, nemo eius, animi expedita, soluta, quo. Doloremque nisi, minima deleniti.',
-    main_image: "http://via.placeholder.com/600x400",
-    thumb_image: "http://via.placeholder.com/350x200"
-  )
+Portfolio.create!(
+  title: "Portfolio title: angular things",
+  subtitle: "Angular",
+  body:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit provident aliquid debitis perferendis eaque dolor, nemo eius, animi expedita, soluta, quo. Doloremque nisi, minima deleniti.',
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image: "http://via.placeholder.com/350x200"
+)
 
 puts '9 Portfoilios items created'
+
+3.times do |tech|
+  Portfolio.last.technologies.create!(name: "Technology #{tech}")
+end
+
+puts '3 Technologies created'
+
+
+
+
+
