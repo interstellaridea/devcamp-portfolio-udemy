@@ -1,7 +1,16 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic: #{topic}"
+  )
+end
+
+puts '3 Topics created'
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium suscipit, iusto atque dignissimos illum est possimus libero, in et modi error accusamus explicabo aliquam qui!" 
+    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium suscipit, iusto atque dignissimos illum est possimus libero, in et modi error accusamus explicabo aliquam qui!",
+    topic_id: Topic.last.id
   )
 end
 
@@ -16,14 +25,33 @@ end
 puts '10 Blog posts created'
 puts '5 Skills created'
 
-9.times do |port|
+8.times do |port|
   Portfolio.create!(
     title: "Portfolio title: #{port}",
-    subtitle: "my great service",
+    subtitle: "Ruby on Rails",
     body:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit provident aliquid debitis perferendis eaque dolor, nemo eius, animi expedita, soluta, quo. Doloremque nisi, minima deleniti.',
     main_image: "http://via.placeholder.com/600x400",
     thumb_image: "http://via.placeholder.com/350x200"
   )
 end
 
+Portfolio.create!(
+  title: "Portfolio title: angular things",
+  subtitle: "Angular",
+  body:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit provident aliquid debitis perferendis eaque dolor, nemo eius, animi expedita, soluta, quo. Doloremque nisi, minima deleniti.',
+  main_image: "http://via.placeholder.com/600x400",
+  thumb_image: "http://via.placeholder.com/350x200"
+)
+
 puts '9 Portfoilios items created'
+
+3.times do |tech|
+  Portfolio.last.technologies.create!(name: "Technology #{tech}")
+end
+
+puts '3 Technologies created'
+
+
+
+
+
