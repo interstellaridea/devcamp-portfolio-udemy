@@ -164,11 +164,15 @@ body {
 /*
  * Custom styles
  */
+ 
 .card-block {
   color: black;
   text-align: left;
 }
-.card-block > .row {
+.card-block > h2 {
+  padding-left: 20px;
+}
+.card-block .row {
   padding: 12px;
   margin-left: 0;
   margin-right: 0;
@@ -176,12 +180,9 @@ body {
 .auth-links a {
   color: black;
 }
-
-
-// .starter-template {
-//   padding: 9rem 1.5rem;
-//   text-align: center;
-// }
+.register-text {
+  text-align: right;
+}
 
 
 
