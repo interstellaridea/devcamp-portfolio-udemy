@@ -164,7 +164,7 @@ body {
 /*
  * Custom styles
  */
- 
+
 .card-block {
   color: black;
   text-align: left;
@@ -176,6 +176,12 @@ body {
   padding: 12px;
   margin-left: 0;
   margin-right: 0;
+}
+.login .card {
+  padding: 15px;
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
 }
 .auth-links a {
   color: black;
