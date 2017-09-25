@@ -20,3 +20,6 @@
 
 # hiding secrets
 /config/secrets.yml
+
+# ignore dotenv file
+.env
